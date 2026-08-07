@@ -2,8 +2,8 @@
  * Seção de traje: "Esporte Fino" com as cores da festa.
  *
  * Cores configuráveis via props:
- *  - bridesmaidsColor: cor das madrinhas (trocar pela cor real depois)
- *  - groomsmenColor:   cor dos padrinhos (trocar pela cor real depois)
+ *  - bridesmaidsColor: cor das madrinhas (azul serenity)
+ *  - groomsmenColor:   cor dos padrinhos (cinza claro)
  */
 function DressBlock({ label, color, note }) {
   return (
@@ -20,8 +20,8 @@ function DressBlock({ label, color, note }) {
 }
 
 function DressCode({
-  bridesmaidsColor = "#7d8fb5",
-  groomsmenColor = "#6f8f6a",
+  bridesmaidsColor = "#91A8D0",
+  groomsmenColor = "#B8BDC4",
 }) {
   return (
     <section className="section dress-code">
@@ -32,12 +32,12 @@ function DressCode({
         <DressBlock
           label="Cor das Madrinhas"
           color={bridesmaidsColor}
-          note="Evite usar este tom"
+          note="Evite usar azul serenity"
         />
         <DressBlock
           label="Cor dos Padrinhos"
           color={groomsmenColor}
-          note="Evite usar este tom"
+          note="Evite usar cinza claro"
         />
       </div>
     </section>

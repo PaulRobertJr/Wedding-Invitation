@@ -2,7 +2,7 @@ import Hero from "./Hero.jsx";
 import MusicPlayer from "./MusicPlayer.jsx";
 import Blessing from "./Blessing.jsx";
 import Countdown from "./Countdown.jsx";
-import CoupleImage from "./CoupleImage.jsx";
+import ArchPhoto from "./ArchPhoto.jsx";
 import fotoCasal2 from "../assets/images/fotocasal2.jpg";
 import Location from "./Location.jsx";
 import DressCode from "./DressCode.jsx";
@@ -20,7 +20,7 @@ function Home({ isOpen = false }) {
         <Countdown />
 
         <section className="section couple-photo">
-          <CoupleImage src={fotoCasal2} alt="Geibson e Lauren" />
+          <ArchPhoto src={fotoCasal2} alt="Geibson e Lauren" />
         </section>
 
         <Location />

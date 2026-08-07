@@ -111,7 +111,7 @@ button {
 }
 
 .hero-photo {
-  max-width: min(340px, 72vw);
+  max-width: min(250px, 64vw);
   margin-top: 22px;
 }
 
@@ -398,50 +398,6 @@ button {
   margin: 0;
 }
 
-.blessing-columns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(32px, 9vw, 80px);
-  margin-top: 8px;
-}
-
-.blessing-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  min-width: 150px;
-}
-
-.blessing-role {
-  font-family: var(--font-serif);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-  margin-bottom: 10px;
-}
-
-.blessing-name {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(19px, 4vw, 23px);
-  color: var(--ink);
-}
-
-.blessing-divider {
-  width: 1px;
-  align-self: stretch;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(184, 137, 79, 0.45),
-    transparent
-  );
-}
-
 .countdown-date {
   font-family: var(--font-serif);
   font-style: italic;
@@ -491,42 +447,23 @@ button {
   gap: 0;
 }
 
-.photo-frame {
+.arch-photo {
   position: relative;
   width: 100%;
-  max-width: 560px;
-  aspect-ratio: 4 / 3;
+  max-width: min(380px, 80vw);
+  aspect-ratio: 3 / 4;
   margin: 0;
-  border-radius: 18px;
+  border-radius: 50% 50% 0 0;
   overflow: hidden;
-  border: 1px solid rgba(184, 137, 79, 0.3);
+  border: 2px solid #fbf8f2;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-  background: linear-gradient(160deg, var(--surface), var(--bg-deep));
 }
 
-.photo-frame img {
+.arch-photo img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.photo-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: var(--ink-soft);
-}
-
-.photo-placeholder-script {
-  font-family: var(--font-script);
-  font-size: clamp(30px, 7vw, 42px);
-  line-height: 1.2;
-  color: var(--gold-deep);
 }
 
 .location-venue {

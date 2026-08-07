@@ -1,4 +1,4 @@
-import CoupleImage from "./CoupleImage.jsx";
+import ArchPhoto from "./ArchPhoto.jsx";
 import fotoLugar1 from "../assets/images/fotolugar1.jpg";
 
 const VENUE_NAME = "Florença Festas";
@@ -16,7 +16,7 @@ function Location() {
       <h2 className="location-venue">{VENUE_NAME}</h2>
       <p className="location-address">{VENUE_ADDRESS}</p>
 
-      <CoupleImage src={fotoLugar1} alt={VENUE_NAME} />
+      <ArchPhoto src={fotoLugar1} alt={VENUE_NAME} />
 
       <a
         className="map-link"

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Monogram from "./Monogram.jsx";
-import CoupleImage from "./CoupleImage.jsx";
+import ArchPhoto from "./ArchPhoto.jsx";
 import fotoCasal1 from "../assets/images/fotocasal1.jpg";
 
 const EASE = [0.22, 0.61, 0.36, 1];
@@ -17,7 +17,7 @@ function Hero({ isOpen = false }) {
       <p className="hero-kicker">Geibson &amp; Lauren</p>
       <h1 className="hero-title">Nosso Casamento</h1>
       <p className="hero-date">01 de Novembro de 2026</p>
-      <CoupleImage
+      <ArchPhoto
         src={fotoCasal1}
         alt="Geibson e Lauren"
         className="hero-photo"
