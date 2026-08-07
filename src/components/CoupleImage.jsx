@@ -5,10 +5,14 @@ function CoupleImage({
   alt = "",
   initials,
   placeholderText = "Em breve, uma foto aqui",
+  className,
   ...props
 }) {
   return (
-    <figure className="photo-frame" {...props}>
+    <figure
+      className={["photo-frame", className].filter(Boolean).join(" ")}
+      {...props}
+    >
       {src ? (
         <img src={src} alt={alt} loading="lazy" />
       ) : (

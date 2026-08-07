@@ -3,7 +3,11 @@ import MusicPlayer from "./MusicPlayer.jsx";
 import Blessing from "./Blessing.jsx";
 import Countdown from "./Countdown.jsx";
 import CoupleImage from "./CoupleImage.jsx";
+import fotoCasal2 from "../assets/images/fotocasal2.jpg";
 import Location from "./Location.jsx";
+import DressCode from "./DressCode.jsx";
+import ActionButtons from "./ActionButtons.jsx";
+import ClosingSection from "./ClosingSection.jsx";
 
 function Home({ isOpen = false }) {
   return (
@@ -16,10 +20,13 @@ function Home({ isOpen = false }) {
         <Countdown />
 
         <section className="section couple-photo">
-          <CoupleImage initials="G & L" placeholderText="Nosso momento" />
+          <CoupleImage src={fotoCasal2} alt="Geibson e Lauren" />
         </section>
 
         <Location />
+        <DressCode />
+        <ActionButtons />
+        <ClosingSection />
       </main>
     </div>
   );
