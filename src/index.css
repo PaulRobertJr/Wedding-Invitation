@@ -1,21 +1,33 @@
 :root {
-  --bg: #faf7f1;
-  --bg-soft: #fbf8f2;
-  --bg-deep: #f1e9db;
-  --surface: #ffffff;
-  --letter: #fffdf8;
-  --ink: #4a3f35;
-  --ink-soft: #8a7d6f;
-  --gold: #b8894f;
-  --gold-deep: #a0743a;
-  --wax: #9e2f2b;
-  --wax-deep: #7f211f;
-  --env-body: #f3ead9;
-  --env-flap: #efe3cd;
-  --env-flap-deep: #e5d4b8;
+  /* Paleta do site */
+  --color-ivory: #f7f3ec;
+  --color-ink: #1f2a24;
+  --color-wine: #6e2c3b;
+  --color-gold: #b98b4e;
 
-  --font-display: "Great Vibes", cursive;
-  --font-body: "Playfair Display", Georgia, serif;
+  /* Variáveis derivadas (semânticas) */
+  --bg: var(--color-ivory);
+  --bg-soft: #fbf9f4;
+  --bg-deep: #efe8db;
+  --surface: #ffffff;
+  --letter: #fdfbf6;
+  --ink: var(--color-ink);
+  --ink-soft: #7a837d;
+  --gold: var(--color-gold);
+  --gold-deep: #9a6f35;
+  --wax: var(--color-wine);
+  --wax-deep: #571f2b;
+  --env-body: #f2eada;
+  --env-flap: #ede2cc;
+  --env-flap-deep: #e0d1b4;
+
+  /* Tipografia:
+     --font-display: script de destaque (nomes, monograma, títulos).
+       Parisienne em uso; Cormorant SC também está carregada no index.html,
+       basta trocar o valor abaixo para alternar.
+     --font-body: serifada para textos/subtítulos/labels. */
+  --font-display: "Parisienne", cursive;
+  --font-body: "EB Garamond", Georgia, serif;
 
   color-scheme: light;
   font: 17px/1.55 var(--font-body);
@@ -55,10 +67,9 @@ button {
 }
 
 .monogram-letter {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.06em;
   color: var(--ink);
 }
 
@@ -247,11 +258,11 @@ button {
 }
 
 .envelope-seal .monogram-letter {
-  color: #f6ead6;
+  color: var(--letter);
 }
 
 .envelope-seal .monogram-amp {
-  color: #e9cfa4;
+  color: var(--gold);
 }
 
 .seal-burst {
@@ -327,7 +338,7 @@ button {
   width: min(440px, 100%);
   padding: 10px 18px 10px 12px;
   background: var(--surface);
-  border: 1px solid rgba(184, 137, 79, 0.3);
+  border: 1px solid rgba(185, 139, 78, 0.3);
   border-radius: 999px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
@@ -422,7 +433,7 @@ button {
   min-width: clamp(66px, 19vw, 92px);
   padding: 16px 10px 12px;
   background: var(--surface);
-  border: 1px solid rgba(184, 137, 79, 0.28);
+  border: 1px solid rgba(185, 139, 78, 0.28);
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
@@ -454,7 +465,7 @@ button {
   margin: 0;
   border-radius: 50% 50% 0 0;
   overflow: hidden;
-  border: 2px solid #fbf8f2;
+  border: 2px solid var(--letter);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
@@ -542,7 +553,7 @@ button {
   gap: 10px;
   padding: 24px 16px 20px;
   background: var(--surface);
-  border: 1px solid rgba(184, 137, 79, 0.28);
+  border: 1px solid rgba(185, 139, 78, 0.28);
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
@@ -553,7 +564,7 @@ button {
   border-radius: 50%;
   border: 3px solid #fff;
   box-shadow:
-    0 0 0 1px rgba(184, 137, 79, 0.4),
+    0 0 0 1px rgba(185, 139, 78, 0.4),
     0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -587,7 +598,7 @@ button {
   width: 100%;
   padding: 10px 18px 10px 12px;
   background: var(--surface);
-  border: 1px solid rgba(184, 137, 79, 0.32);
+  border: 1px solid rgba(185, 139, 78, 0.32);
   border-radius: 999px;
   color: var(--ink);
   text-decoration: none;
@@ -656,4 +667,124 @@ button {
   font-size: clamp(16px, 3.5vw, 19px);
   color: var(--ink-soft);
   margin: 0;
+}
+
+/* ------------------------------ */
+/* Lista de presentes             */
+/* ------------------------------ */
+
+.gift-page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7vh 24px 12vh;
+  background: var(--bg);
+  text-align: center;
+}
+
+.gift-back {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid rgba(185, 139, 78, 0.4);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.gift-back:hover {
+  border-color: var(--gold);
+  background: var(--bg-soft);
+  transform: translateY(-1px);
+}
+
+.gift-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 10vw, 64px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-wine);
+  margin: 18px 0 0;
+}
+
+.gift-sub {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 3.5vw, 18px);
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin: 10px 0 40px;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 3.5vw, 22px);
+  width: 100%;
+  max-width: 860px;
+}
+
+@media (min-width: 640px) {
+  .gift-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .gift-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gift-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 14px 18px;
+  background: var(--surface);
+  border: 1px solid rgba(185, 139, 78, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.gift-card-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(14px, 3.5vw, 17px);
+  color: var(--ink);
+}
+
+.gift-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.gift-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--surface), var(--bg-deep));
+  color: var(--gold);
+}
+
+.gift-price {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(15px, 3.5vw, 18px);
+  color: var(--color-wine);
 }

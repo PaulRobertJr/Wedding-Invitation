@@ -1,23 +1,28 @@
-import { useEffect, useState } from 'react'
-import EnvelopeIntro from './components/EnvelopeIntro.jsx'
-import Home from './components/Home.jsx'
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Home from "./components/Home.jsx";
+import GiftList from "./components/GiftList.jsx";
 
-function App() {
-  const [isOpen, setIsOpen] = useState(false)
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? '' : 'hidden'
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [isOpen])
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-  return (
-    <>
-      <Home isOpen={isOpen} />
-      {!isOpen && <EnvelopeIntro onOpen={() => setIsOpen(true)} />}
-    </>
-  )
+  return null;
 }
 
-export default App
+function App() {
+  return (
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/presentes" element={<GiftList />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;

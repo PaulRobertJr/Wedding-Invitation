@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function MapPinIcon() {
   return (
     <svg
@@ -81,11 +83,10 @@ function PixIcon() {
 /**
  * Lista de ações principais do convite.
  *
- * TODO: apontar cada href para a rota/página real quando existirem:
  *  - "#localizacao"       -> âncora para a seção de localização (mesma página)
  *  - Confirmar Presença   -> abre o WhatsApp com a mensagem pré-preenchida
- *  - "/presentes"         -> lista de presentes (loja virtual)
- *  - "/pix"               -> chave/QR code do Pix
+ *  - Lista de Presentes   -> rota /presentes (GiftList)
+ *  - "/pix"               -> chave/QR code do Pix (TODO: definir rota/destino)
  */
 const ACTIONS = [
   { label: "Localização", href: "#localizacao", Icon: MapPinIcon },
@@ -95,27 +96,36 @@ const ACTIONS = [
     Icon: CalendarCheckIcon,
     external: true,
   },
-  { label: "Lista de Presentes", href: "/presentes", Icon: GiftIcon },
+  { label: "Lista de Presentes", to: "/presentes", Icon: GiftIcon },
   { label: "Presentear pelo Pix", href: "/pix", Icon: PixIcon },
 ];
 
 function ActionButtons() {
   return (
     <section className="section action-buttons">
-      {ACTIONS.map(({ label, href, Icon, external }) => (
-        <a
-          key={label}
-          className="action-button"
-          href={href}
-          target={external ? "_blank" : undefined}
-          rel={external ? "noopener noreferrer" : undefined}
-        >
-          <span className="action-button-icon">
-            <Icon />
-          </span>
-          <span className="action-button-label">{label}</span>
-        </a>
-      ))}
+      {ACTIONS.map(({ label, href, to, Icon, external }) =>
+        to ? (
+          <Link key={label} className="action-button" to={to}>
+            <span className="action-button-icon">
+              <Icon />
+            </span>
+            <span className="action-button-label">{label}</span>
+          </Link>
+        ) : (
+          <a
+            key={label}
+            className="action-button"
+            href={href}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
+          >
+            <span className="action-button-icon">
+              <Icon />
+            </span>
+            <span className="action-button-label">{label}</span>
+          </a>
+        ),
+      )}
     </section>
   );
 }
