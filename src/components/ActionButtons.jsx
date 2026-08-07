@@ -82,14 +82,19 @@ function PixIcon() {
  * Lista de ações principais do convite.
  *
  * TODO: apontar cada href para a rota/página real quando existirem:
- *  - "#localizacao"        -> âncora para a seção de localização (mesma página)
- *  - "/confirmar-presenca" -> página/formulário de confirmação de presença
- *  - "/presentes"          -> lista de presentes (loja virtual)
- *  - "/pix"                -> chave/QR code do Pix
+ *  - "#localizacao"       -> âncora para a seção de localização (mesma página)
+ *  - Confirmar Presença   -> abre o WhatsApp com a mensagem pré-preenchida
+ *  - "/presentes"         -> lista de presentes (loja virtual)
+ *  - "/pix"               -> chave/QR code do Pix
  */
 const ACTIONS = [
   { label: "Localização", href: "#localizacao", Icon: MapPinIcon },
-  { label: "Confirmar Presença", href: "/confirmar-presenca", Icon: CalendarCheckIcon },
+  {
+    label: "Confirmar Presença",
+    href: "https://wa.me/5541984492749?text=oi%2Cconfirmado",
+    Icon: CalendarCheckIcon,
+    external: true,
+  },
   { label: "Lista de Presentes", href: "/presentes", Icon: GiftIcon },
   { label: "Presentear pelo Pix", href: "/pix", Icon: PixIcon },
 ];
@@ -97,8 +102,14 @@ const ACTIONS = [
 function ActionButtons() {
   return (
     <section className="section action-buttons">
-      {ACTIONS.map(({ label, href, Icon }) => (
-        <a key={label} className="action-button" href={href}>
+      {ACTIONS.map(({ label, href, Icon, external }) => (
+        <a
+          key={label}
+          className="action-button"
+          href={href}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+        >
           <span className="action-button-icon">
             <Icon />
           </span>

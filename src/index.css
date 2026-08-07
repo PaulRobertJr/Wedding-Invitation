@@ -14,12 +14,11 @@
   --env-flap: #efe3cd;
   --env-flap-deep: #e5d4b8;
 
-  --font-script: "Great Vibes", cursive;
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Great Vibes", cursive;
+  --font-body: "Playfair Display", Georgia, serif;
 
   color-scheme: light;
-  font: 17px/1.55 var(--font-sans);
+  font: 17px/1.55 var(--font-body);
   color: var(--ink);
   background: var(--bg);
   font-synthesis: none;
@@ -56,7 +55,7 @@ button {
 }
 
 .monogram-letter {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-weight: 500;
   font-style: italic;
   letter-spacing: 0.05em;
@@ -64,7 +63,7 @@ button {
 }
 
 .monogram-amp {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
   font-size: 0.92em;
   color: var(--gold);
   transform: translateY(-0.06em);
@@ -86,14 +85,14 @@ button {
 }
 
 .hero-kicker {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
   font-size: clamp(30px, 6vw, 42px);
   color: var(--gold-deep);
   margin: 18px 0 4px;
 }
 
 .hero-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: clamp(22px, 4vw, 30px);
   letter-spacing: 0.22em;
@@ -102,7 +101,7 @@ button {
 }
 
 .hero-date {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(15px, 3vw, 18px);
   color: var(--ink-soft);
@@ -274,7 +273,7 @@ button {
 }
 
 .hint-script {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
   font-size: clamp(32px, 8vw, 40px);
   color: var(--ink-soft);
   line-height: 1.1;
@@ -314,7 +313,7 @@ button {
 }
 
 .section-script {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
   font-size: clamp(34px, 8vw, 48px);
   line-height: 1.2;
   color: var(--ink);
@@ -367,7 +366,7 @@ button {
 }
 
 .music-label {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
   font-size: 22px;
   line-height: 1;
   color: var(--ink);
@@ -390,7 +389,7 @@ button {
 }
 
 .blessing-text {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
   font-size: clamp(36px, 8vw, 52px);
   line-height: 1.25;
   color: var(--ink);
@@ -399,7 +398,7 @@ button {
 }
 
 .countdown-date {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(21px, 4.5vw, 27px);
   letter-spacing: 0.1em;
@@ -429,7 +428,7 @@ button {
 }
 
 .countdown-num {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: clamp(32px, 8.5vw, 46px);
   line-height: 1;
@@ -467,7 +466,7 @@ button {
 }
 
 .location-venue {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-size: clamp(24px, 5vw, 30px);
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -476,7 +475,7 @@ button {
 }
 
 .location-address {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(16px, 3.5vw, 19px);
   letter-spacing: 0.04em;
@@ -516,7 +515,7 @@ button {
 /* ------------------------------ */
 
 .dress-code-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-size: clamp(24px, 5vw, 30px);
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -559,7 +558,7 @@ button {
 }
 
 .dress-label {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.08em;
@@ -621,7 +620,7 @@ button {
 }
 
 .action-button-label {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.04em;
@@ -637,7 +636,7 @@ button {
 }
 
 .closing-line {
-  font-family: var(--font-script);
+  font-family: var(--font-display);
   font-size: clamp(48px, 12vw, 84px);
   line-height: 1.15;
   color: var(--ink);
@@ -645,14 +644,14 @@ button {
 }
 
 .closing-accent {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 1.25em;
   color: var(--gold-deep);
 }
 
 .closing-sub {
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(16px, 3.5vw, 19px);
   color: var(--ink-soft);
