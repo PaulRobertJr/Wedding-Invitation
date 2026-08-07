@@ -10,9 +10,11 @@ const formatTime = (seconds) => {
   return `${m}:${pad(s)}`;
 };
 
+let hasInteracted = false;
+let justUnmuted = false;
+
 function MusicPlayer({ audioSrc = defaultAudioSrc, label = "Nossa música" }) {
   const audioRef = useRef(null);
-  const unmutedRef = useRef(false);
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -23,7 +25,7 @@ function MusicPlayer({ audioSrc = defaultAudioSrc, label = "Nossa música" }) {
 
     audio.loop = true;
     audio.preload = "metadata";
-    audio.muted = true;
+    audio.muted = !hasInteracted;
 
     const onTime = () => setProgress(audio.currentTime);
     const onDuration = () => setDuration(audio.duration);
@@ -47,16 +49,49 @@ function MusicPlayer({ audioSrc = defaultAudioSrc, label = "Nossa música" }) {
     };
   }, [audioSrc]);
 
+  useEffect(() => {
+    const handleFirstInteraction = (event) => {
+      if (hasInteracted) return;
+      hasInteracted = true;
+
+      const audio = audioRef.current;
+      if (!audio) return;
+      audio.muted = false;
+      audio.volume = 1;
+      if (audio.paused) audio.play().catch(() => {});
+
+      const target = event.target;
+      const inPlayer =
+        target instanceof Element && target.closest(".music-player");
+      justUnmuted = Boolean(inPlayer);
+    };
+
+    window.addEventListener("pointerdown", handleFirstInteraction, {
+      once: true,
+    });
+
+    window.addEventListener("touchstart", handleFirstInteraction, {
+      once: true,
+    });
+
+    return () => {
+      window.removeEventListener("pointerdown", handleFirstInteraction);
+      window.removeEventListener("touchstart", handleFirstInteraction);
+    };
+  }, []);
+
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
 
+    if (justUnmuted) {
+      justUnmuted = false;
+      return;
+    }
+
     if (audio.paused) {
-      if (!unmutedRef.current) {
-        unmutedRef.current = true;
-        audio.muted = false;
-        audio.volume = 1;
-      }
+      audio.muted = false;
+      audio.volume = 1;
       audio.play().catch(() => {});
     } else {
       audio.pause();
@@ -73,7 +108,14 @@ function MusicPlayer({ audioSrc = defaultAudioSrc, label = "Nossa música" }) {
 
   return (
     <div className="music-player">
-      <audio ref={audioRef} src={audioSrc} preload="metadata" />
+      <audio
+        ref={audioRef}
+        src={audioSrc}
+        preload="metadata"
+        autoPlay
+        muted
+        loop
+      />
 
       <button
         type="button"
