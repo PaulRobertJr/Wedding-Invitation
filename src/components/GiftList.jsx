@@ -7,22 +7,20 @@ const GIFTS = [
     price: 49.99,
     image: "",
   },
-  11 + { title: "Acessório para pedicure do noivo", price: 429.9, image: "" },
-  12 + { title: "Primeiro lugar na fila do buffet", price: 289.9, image: "" },
-  13 +
-    {
-      title: "Um ano de corte de cabelo para o noivo",
-      price: 159.9,
-      image: "",
-    },
-  14 + { title: "Deus tocou no seu coração", price: 219.9, image: "" },
-  15 + { title: "Amigos para sempre", price: 129.9, image: "" },
-  16 +
-    {
-      title: "Taxa para a noiva não jogar o buquê na sua namorada",
-      price: 99.9,
-      image: "",
-    },
+  { title: "Acessório para pedicure do noivo", price: 429.9, image: "" },
+  { title: "Primeiro lugar na fila do buffet", price: 289.9, image: "" },
+  {
+    title: "Um ano de corte de cabelo para o noivo",
+    price: 159.9,
+    image: "",
+  },
+  { title: "Deus tocou no seu coração", price: 219.9, image: "" },
+  { title: "Amigos para sempre", price: 129.9, image: "" },
+  {
+    title: "Taxa para a noiva não jogar o buquê na sua namorada",
+    price: 99.9,
+    image: "",
+  },
 ];
 const priceFormat = new Intl.NumberFormat("pt-BR", {
   style: "currency",
