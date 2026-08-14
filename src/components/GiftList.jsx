@@ -7,12 +7,13 @@ import Monogram from "./Monogram.jsx";
  * src/assets/images/ e passe o caminho importado no campo `image`.
  */
 const GIFTS = [
-  { title: "Jogo de Panelas", price: 349.9, image: "" },
-  { title: "Jogo de Jantar", price: 429.9, image: "" },
-  { title: "Air Fryer", price: 289.9, image: "" },
-  { title: "Liquidificador", price: 159.9, image: "" },
-  { title: "Jogo de Cama Queen", price: 219.9, image: "" },
-  { title: "Jogo de Toalhas", price: 129.9, image: "" },
+  { title: "Cobertor pra noiva estar sempre coberta de razão", price: 49.99, image: "" },
+  { title: "Acessório para pedicure do noivo", price: 429.9, image: "" },
+  { title: "Primeiro lugar na fila do buffet", price: 289.9, image: "" },
+  { title: "Um ano de corte de cabelo para o noivo", price: 159.9, image: "" },
+  { title: "Deus tocou no seu coração", price: 219.9, image: "" },
+  { title: "Amigos para sempre", price: 129.9, image: "" },
+  { title: "Taxa para a noiva não jogar o buquê na sua namorada", price: 99.9, image: "" },
 ];
 
 const priceFormat = new Intl.NumberFormat("pt-BR", {
@@ -22,11 +23,17 @@ const priceFormat = new Intl.NumberFormat("pt-BR", {
 
 function GiftImage({ image, title }) {
   if (image) {
-    return <img className="gift-image" src={image} alt={title} loading="lazy" />;
+    return (
+      <img className="gift-image" src={image} alt={title} loading="lazy" />
+    );
   }
 
   return (
-    <div className="gift-image gift-image-placeholder" role="img" aria-label={title}>
+    <div
+      className="gift-image gift-image-placeholder"
+      role="img"
+      aria-label={title}
+    >
       <svg
         width="34"
         height="34"
@@ -62,8 +69,8 @@ function GiftList() {
       <Monogram initials="G & L" size={56} />
       <h1 className="gift-title">Lista de Presentes</h1>
       <p className="gift-sub">
-        Sua presença já é o melhor presente. Se quiser nos presentear, escolha um
-        item da nossa lista.
+        Sua presença já é o melhor presente. Se quiser nos presentear, escolha
+        um item da nossa lista.
       </p>
 
       <div className="gift-grid">
