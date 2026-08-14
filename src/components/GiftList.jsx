@@ -1,25 +1,36 @@
 import { Link } from "react-router-dom";
 import Monogram from "./Monogram.jsx";
+import coberta1 from "../assets/images/coberta1.jpg";
+import pedicure from "../assets/images/pedicure.png";
+import laurenBuffet from "../assets/images/laurenbuffet.jpg";
+import geibsonCalvo from "../assets/images/geibsoncalvo.jpg";
+import deus from "../assets/images/deus.jpg";
+import amigosVelhinhos from "../assets/images/amigos_velhinhos.jpg";
+import buque from "../assets/images/buque.jpeg";
 
 const GIFTS = [
   {
-    title: "Cobertor pra noiva estar sempre coberta de razão",
+    title: "Cobertor para a noiva estar sempre coberta de razão",
     price: 49.99,
-    image: "",
+    image: coberta1,
   },
-  { title: "Acessório para pedicure do noivo", price: 429.9, image: "" },
-  { title: "Primeiro lugar na fila do buffet", price: 289.9, image: "" },
+  { title: "Acessório para pedicure do noivo", price: 429.9, image: pedicure },
+  {
+    title: "Primeiro lugar na fila do buffet",
+    price: 289.9,
+    image: laurenBuffet,
+  },
   {
     title: "Um ano de corte de cabelo para o noivo",
     price: 159.9,
-    image: "",
+    image: geibsonCalvo,
   },
-  { title: "Deus tocou no seu coração", price: 219.9, image: "" },
-  { title: "Amigos para sempre", price: 129.9, image: "" },
+  { title: "Deus tocou no seu coração", price: 219.9, image: deus },
+  { title: "Amigos para sempre", price: 129.9, image: amigosVelhinhos },
   {
     title: "Taxa para a noiva não jogar o buquê na sua namorada",
     price: 99.9,
-    image: "",
+    image: buque,
   },
 ];
 const priceFormat = new Intl.NumberFormat("pt-BR", {
