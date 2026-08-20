@@ -92,7 +92,7 @@ const ACTIONS = [
   { label: "Localização", href: "#localizacao", Icon: MapPinIcon },
   {
     label: "Confirmar Presença",
-    href: "https://wa.me/5541984492749?text=oi%2Cconfirmado",
+    href: "https://wa.me/5541984492749?text=Confirma%C3%A7%C3%A3o%20de%20presen%C3%A7a%20%F0%9F%92%8D%F0%9F%A4%8D%0A%0AConfirmo%20minha%20presen%C3%A7a%20no%20casamento%20de%20Geibson%20%26%20Lauren%20!%20%F0%9F%A5%82%0A%0ANome%3A%0ATelefone%3A%0ACrian%C3%A7as%3A%20(nome%20e%20idade%2C%20se%20houver)%0A%0A%E2%9C%A8%20Estamos%20muito%20felizes%20em%20ter%20voc%C3%AA%20conosco%20nesse%20dia%20especial",
     Icon: CalendarCheckIcon,
     external: true,
   },
