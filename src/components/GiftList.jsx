@@ -22,66 +22,103 @@ const GIFTS = [
     title: "Cobertor para a noiva estar sempre coberta de razão",
     price: 49.99,
     image: coberta1,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/K6wmbNlHyH",
   },
   {
     title: "1 ano de papel higiênico para o noivo",
     price: 270.0,
     image: papelhigienico,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/K6wmbNlHyH",
   },
   {
     title: "Tampão de ouvido para Lauren não ouvir o Geibson roncar ",
     price: 99.9,
     image: tampaoouvido,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/88dMJH8Q7H",
   },
   {
     title: "Patrocine a despedida do Noivo",
     price: 499.9,
     image: despedidanoivo,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/QI14cod5zw",
   },
   {
     title: "Patrocine a despedida da Noiva",
     price: 499.9,
     image: despedidanoiva,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/TPcDsuI3l3",
   },
-  { title: "Cueca sexy para a noite de núpcia", price: 159.9, image: cueca },
-  { title: "Ajuda para mobiliar a casa", price: 799.9, image: ajudamobilia },
-  { title: "Acessório para pedicure do noivo", price: 429.9, image: pedicure },
+  {
+    title: "Cueca sexy para a noite de núpcia",
+    price: 159.9,
+    image: cueca,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/TPcDsuI3l3",
+  },
+  {
+    title: "Ajuda para mobiliar a casa",
+    price: 799.9,
+    image: ajudamobilia,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/O79Rm3QzBN",
+  },
+  {
+    title: "Acessório para pedicure do noivo",
+    price: 429.9,
+    image: pedicure,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/xVUelRkK71",
+  },
   {
     title: "Primeiro lugar na fila do buffet",
     price: 289.9,
     image: laurenBuffet,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/fcnkFHVjrj",
   },
   {
     title: "Um ano de corte de cabelo para o noivo",
     price: 159.9,
     image: geibsonCalvo,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/r1IDZjthLu",
   },
-  { title: "Deus tocou no seu coração", price: 219.9, image: deus },
-  { title: "Amigos para sempre", price: 129.9, image: amigosVelhinhos },
+  {
+    title: "Deus tocou no seu coração",
+    price: 219.9,
+    image: deus,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/SW49WXmSM1",
+  },
+  {
+    title: "Amigos para sempre",
+    price: 129.9,
+    image: amigosVelhinhos,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/JmihQOxNeb",
+  },
   {
     title: "Coral pra cantar 'aleluia' na entrada do noivo",
     price: 329.9,
     image: coral,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/ReFFCodWTZ",
   },
   {
     title: "vaquinha para ajudar os noivos",
     price: 99.9,
     image: vaquinha,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/fd8RXuWT95",
   },
   {
     title: "Taxa para não jogar o buquê na sua namorada",
     price: 149.9,
     image: buque,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/d8lQUSDMFA",
   },
   {
     title: "Taxa para jogar o buquê na sua namorada",
     price: 199.9,
     image: buque,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/QoDjlRcQC2",
   },
   {
     title: "Eu dei o melhor presente",
     price: 1999.9,
     image: rica,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/NdjTKo1hko",
   },
 ];
 const priceFormat = new Intl.NumberFormat("pt-BR", {
@@ -142,6 +179,16 @@ function GiftList() {
             <span className="gift-card-title">{gift.title}</span>
             <GiftImage image={gift.image} title={gift.title} />
             <span className="gift-price">{priceFormat.format(gift.price)}</span>
+            {gift.link && (
+              <a
+                className="gift-link"
+                href={gift.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Presentear
+              </a>
+            )}
           </div>
         ))}
       </div>

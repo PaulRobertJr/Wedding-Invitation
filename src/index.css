@@ -789,3 +789,30 @@ button {
   font-size: clamp(15px, 3.5vw, 18px);
   color: var(--color-wine);
 }
+
+.gift-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.gift-link:hover {
+  background: var(--gold-deep);
+}
+
+.gift-link:active {
+  transform: scale(0.97);
+}
