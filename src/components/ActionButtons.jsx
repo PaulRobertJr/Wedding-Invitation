@@ -97,7 +97,11 @@ const ACTIONS = [
     external: true,
   },
   { label: "Lista de Presentes", to: "/presentes", Icon: GiftIcon },
-  { label: "Presentear pelo Pix", href: "/pix", Icon: PixIcon },
+  {
+    label: "Presentear pelo Pix",
+    href: "https://nubank.com.br/cobrar/a34pv/6a8779b4-4844-461a-af60-eaa29d208e81",
+    Icon: PixIcon,
+  },
 ];
 
 function ActionButtons() {
