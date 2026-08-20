@@ -28,7 +28,7 @@ const GIFTS = [
     title: "1 ano de papel higiênico para o noivo",
     price: 270.0,
     image: papelhigienico,
-    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/K6wmbNlHyH",
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/lCt66fBf4Q",
   },
   {
     title: "Tampão de ouvido para Lauren não ouvir o Geibson roncar ",
@@ -52,7 +52,7 @@ const GIFTS = [
     title: "Cueca sexy para a noite de núpcia",
     price: 159.9,
     image: cueca,
-    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/TPcDsuI3l3",
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/t9UbNj77ql",
   },
   {
     title: "Ajuda para mobiliar a casa",
@@ -119,6 +119,12 @@ const GIFTS = [
     price: 1999.9,
     image: rica,
     link: "https://checkout.infinitepay.io/lauren_izadora_vicente/NdjTKo1hko",
+  },
+  {
+    title: "teste",
+    price: 1.0,
+    image: rica,
+    link: "https://checkout.infinitepay.io/lauren_izadora_vicente/RaWGw9AR8d",
   },
 ];
 const priceFormat = new Intl.NumberFormat("pt-BR", {
