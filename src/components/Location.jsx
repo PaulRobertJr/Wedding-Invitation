@@ -6,8 +6,7 @@ const VENUE_ADDRESS =
   "R. Júlio César Setenareski, 2493 - Colônia Murici, São José dos Pinhais - PR, 83085-290";
 
 // Link exato do Google Maps (rota a partir da localização atual).
-const MAPS_URL =
-  "https://www.google.com/maps/dir//Floren%C3%A7a+Festas,+R.+J%C3%BAlio+C%C3%A9sar+Setenareski,+2493+-+Col%C3%B4nia+Murici,+S%C3%A3o+Jos%C3%A9+dos+Pinhais+-+PR,+83085-290/@-25.4616658,-49.334863,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94dcf75eb19682ed:0x759d7db2cf7d6100!2m2!1d-49.1194195!2d-25.5642801?entry=ttu&g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D";
+const MAPS_URL = import.meta.env.VITE_MAPS_URL;
 
 function Location() {
   return (

@@ -80,6 +80,9 @@ function PixIcon() {
   );
 }
 
+const WHATSAPP_URL = import.meta.env.VITE_WHATSAPP_URL;
+const PIX_URL = import.meta.env.VITE_PIX_URL;
+
 /**
  * Lista de ações principais do convite.
  *
@@ -92,14 +95,14 @@ const ACTIONS = [
   { label: "Localização", href: "#localizacao", Icon: MapPinIcon },
   {
     label: "Confirmar Presença",
-    href: "https://wa.me/5541984492749?text=Confirma%C3%A7%C3%A3o%20de%20presen%C3%A7a%20%F0%9F%92%8D%F0%9F%A4%8D%0A%0AConfirmo%20minha%20presen%C3%A7a%20no%20casamento%20de%20Geibson%20%26%20Lauren%20!%20%F0%9F%A5%82%0A%0ANome%3A%0ATelefone%3A%0ACrian%C3%A7as%3A%20(nome%20e%20idade%2C%20se%20houver)%0A%0A%E2%9C%A8%20Estamos%20muito%20felizes%20em%20ter%20voc%C3%AA%20conosco%20nesse%20dia%20especial",
+    href: WHATSAPP_URL,
     Icon: CalendarCheckIcon,
     external: true,
   },
   { label: "Lista de Presentes", to: "/presentes", Icon: GiftIcon },
   {
     label: "Presentear pelo Pix",
-    href: "https://nubank.com.br/cobrar/a34pv/6a8779b4-4844-461a-af60-eaa29d208e81",
+    href: PIX_URL,
     Icon: PixIcon,
   },
 ];
